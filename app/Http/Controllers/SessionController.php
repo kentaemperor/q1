@@ -14,7 +14,14 @@ class SessionController extends Controller
   public function postSes(Request $request)
   {
     $txt = $request->input;
-    $request->session()->put('txt',$txt);
-    return redirect('/session');
+    $request->session()->flash('txt',$txt);
+    $data = $request->session()->get('txt');
+    return view('check',['data'=>$data]);
   }
+
+  public function backHome(Request $request)
+ {
+  return redirect('/session');
+ }
+
 }
