@@ -10,7 +10,7 @@ class AuthorController extends Controller
 {
   public function index()
   {
-    $authors = Author::simplePaginate(3);
+    $authors = Author::Paginate(3);
     return view('index', ['authors' => $authors]);
   }
 
