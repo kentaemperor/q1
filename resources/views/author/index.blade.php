@@ -24,6 +24,7 @@ td table tbody tr td {
   background-color: #EEEEEE !important;
 }
 </style>
+
 @section('title', 'author.index.blade.php')
 
 @section('content')
