@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';//これが追加
 
 Route::get('/home', [AuthorController::class, 'index']);
+
+Route::get('/auth', [AuthorController::class,'check']);
+Route::post('/auth', [AuthorController::class,'checkUser']);
