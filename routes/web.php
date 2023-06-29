@@ -28,3 +28,10 @@ Route::get('/home', [AuthorController::class, 'index']);
 
 Route::get('/auth', [AuthorController::class,'check']);
 Route::post('/auth', [AuthorController::class,'checkUser']);
+
+Route::get('/softdelete', function () {
+  $result = Person::find(1)->delete();
+  if($result){
+    return "論理削除されました";
+  }
+});
