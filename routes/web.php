@@ -36,3 +36,4 @@ Route::get('/softdelete', function () {
     return "論理削除されました";
   }
 });
+//aiueo aiueo
