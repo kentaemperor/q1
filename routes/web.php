@@ -32,8 +32,9 @@ Route::post('/auth', [AuthorController::class,'checkUser']);
 
 Route::get('/softdelete', function () {
   $result = Person::find(1)->delete();
+  dd($result);
   if($result){
     return "論理削除されました";
   }
+
 });
-//aiueo aiueo

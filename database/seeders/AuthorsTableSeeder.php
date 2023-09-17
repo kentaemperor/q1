@@ -15,6 +15,30 @@ class AuthorsTableSeeder extends Seeder
   */
   public function run()
   {
-   Author::factory()->count(3)->create();
+    $param = [
+      'name' => 'tony',
+      'age' => 35,
+      'nationality' => 'American'
+    ];
+    Author::create($param);
+    $param = [
+      'name' => 'jack',
+      'age' => 20,
+      'nationality' => 'British'
+    ];
+    Author::create($param);
+    $param = [
+      'name' => 'sara',
+      'age' => 45,
+      'nationality' => 'Egyptian'
+    ];
+    Author::create($param);
+    $param = [
+      'name' => 'saly',
+      'age' => 31,
+      'nationality' => 'Chinese'
+    ];
+    Author::create($param);
+  
   }
 }
